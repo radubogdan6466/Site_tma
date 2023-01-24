@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Rezervari</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-woox-travel.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 580 Woox Travel
+
+https://templatemo.com/tm-580-woox-travel
+
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+</head>
+<body>
+  
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="locatii.html">Locatii</a></li>
+                        <li><a href="deals.html">Deals</a></li>
+                        <li><a href="rezervari.html" class="active">Rezerva</a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="second-page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Alege locatia preferata </h4>
+          <h2>Completeaza rezervarea</h2>
+          <p>De ce noi?</p>
+          <p>
+            Oferim asigurare pentru toata perioada vacantei
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="more-info reservation-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="info-item">
+            <i class="fa fa-phone"></i>
+            <h4>Suna-ne</h4>
+            <a href="#">+40 735 468 383</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="info-item">
+            <i class="fa fa-envelope"></i>
+            <h4>Trimite un email</h4>
+            <a href="#">rcristianb@gmail.com</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="info-item">
+            <i class="fa fa-map-marker"></i>
+            <h4>Viziteaza-ne</h4>
+            <a href="https://www.google.com/maps/dir/45.8077833,21.3135575/uvt/@45.780625,21.2026578,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47455d84610655bf:0xfd169ff24d29f192!2m2!1d21.2316152!2d45.7471195">
+              Bulevardul Vasile Pârvan 4</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="info-item">
+            <i class="fa fa-envelope"></i>
+            <h4>Ai nevoie de asigurare?</h4>
+            <a href="./assets/src/asigurare.pdf">Acoperiri</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reservation-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.629359903222!2d21.230622285199868!3d45.74772366030693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455d84610655bf%3A0xfd169ff24d29f192!2sWest%20University%20of%20Timi%C8%99oara!5e0!3m2!1 sen!2sro!4v1674504655129!5m2!1 sen!2sro" width="100%" height="450px" frameborder="0" style="border:0; border-top-left-radius: 23px; border-top-right-radius: 23px;" allowfullscreen=""></iframe>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <form id="reservation-form" name="gs" method="POST" role="search" action="https://formsubmit.co/77d619ff5ac4e77cb8e7018024c5e966">
+            <div class="row">
+              <div class="col-lg-12">
+                <h4>Pregateste-ti <em>Vacanta</em> Completand acest <em>Formular</em></h4>
+              </div>
+              <div class="col-lg-6">
+                  <fieldset>
+                      <label for="name" class="form-label">Nume</label>
+                      <input id="name" type="text" name="Nume" class="Name" placeholder="Ex. Radu" autocomplete="on" required>
+                  </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                    <label for="surname" class="form-label">Prenume</label>
+                    <input id="surname"type="text" name="Prenume" class="Surname" placeholder="Ex. Cristian Bogdan" autocomplete="on" required>
+                </fieldset>
+            </div>
+            <div class="col-lg-6">
+              <fieldset>
+                  <label for="email" class="form-label">Email</label>
+                  <input id="email" type="email" placeholder="Ex. 123@gmail.com" required name="Adresa email">
+              </fieldset>
+          </div>
+              <div class="col-lg-6">
+                <fieldset>
+                    <label for="Number" class="form-label">Telefon</label>
+                    <input id="phone-number" type="number" name="Telefon" class="Number" placeholder="Ex. +40 735 468 383" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                  <fieldset>
+                      <label for="chooseGuests" class="form-label">Numar persoane</label>
+                     
+                      <select id="amount" name="number-of-persons" class="form-select" aria-label="Default select example" onchange="updatePrice()">
+                          <option selected>Min. 1 Max. 5</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                      </select>
+                      <script>
+                      <div id="price" style="color: black;"/>
+                    </script>
+                  </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                    <label for="Number" class="form-label">Data check-in</label>
+                    <input id="checkInDate" type="date" name="Data check-in" class="date" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                    <label for="Number" class="form-label">Data check-out</label>
+                    <input id="checkInDate" type="date" name="Data check-out" class="date" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                  <fieldset>
+                      <label for="chooseDestination" class="form-label">Alegeti destinatia</label>
+                      <select name="Destinatie" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
+                          <option selected>ex. Italia, Milano</option>
+                          <option value="Italy, Roma">Cosmo Hotel Palace</option>
+                          <option value="Italy, Roma">Hotel Da Vinci</option>
+                          <option value="Italy, Roma">Idea Hotel Milano San Siro</option>
+
+                         
+                      </select>
+                  </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <label for="Detalii" class="form-label">Detalii</label>
+                  <input type="text" class="form-control" rows="5" id="comment" style="width: 100%; border-radius: 30px; background: transparent;" placeholder="OPTIONAL"></input>
+                </fieldset>
+              </div>
+              <!-- <div class="col-lg-12">                        
+                  <fieldset>
+                      <button class="main-button">Trimite rezervarea</button>
+                  </fieldset>
+              </div>-->
+             
+            </div>
+            <!--BEGIN wallet pay button-->
+  <script>
+    $(".option").click(function(){
+      $(".option").removeClass("active");
+      $(this).addClass("active"); 
+    });
+  </script>
+  <div>
+    <button class="pay-button">Rezerva si plateste</button>
+    <div id="status" style="color: black;"></div>
+  </div>
+  <script type="text/javascript">
+    window.addEventListener('load', async () => {
+      if (window.ethereum) {
+        window.web3 = new Web3(ethereum);
+        try {
+          await ethereum.enable();
+          initPayButton()
+        } catch (err) {
+          $('#status').html('Utilizatorul a respins accesul', err)
+        }
+      } else if (window.web3) {
+        window.web3 = new Web3(web3.currentProvider)
+        initPayButton()
+      } else {
+        $('#status').html('Nu aveti MetaMask instalat!')
+      }
+    })
+
+    const initPayButton = () => {
+      $('.pay-button').click(() => {
+        // paymentAddress is where funds will be send to
+        const paymentAddress = '0x42B348c98dB0A60401b818AA9f9fBCDa786e5754'
+
+        if(document.getElementById("amount").value ==1){
+          const amountEth = 0.01
+          web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Plata esuata, fonduri indisponibile', err)
+            $('#status').html('Plata esuata, fonduri indisponibile')
+          } else {
+            console.log('Plata efectuata cu succes', transactionId)
+            $('#status').html('Plata efectuata cu succes')
+          }
+        })
+        }
+        else if(document.getElementById("amount").value ==2){
+          const amountEth = 0.02
+          web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Plata esuata, fonduri indisponibile', err)
+            $('#status').html('Plata esuata, fonduri indisponibile')
+          } else {
+            console.log('Plata efectuata cu succes', transactionId)
+            $('#status').html('Plata efectuata cu succes')
+          }
+        })
+        }
+        else if(document.getElementById("amount").value ==3){
+          const amountEth = 0.03
+          web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Plata esuata, fonduri indisponibile', err)
+            $('#status').html('Plata esuata, fonduri indisponibile')
+          } else {
+            console.log('Plata efectuata cu succes', transactionId)
+            $('#status').html('Plata efectuata cu succes')
+          }
+        })
+        }
+        else if(document.getElementById("amount").value ==4){
+          const amountEth = 0.04
+          web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Plata esuata, fonduri indisponibile', err)
+            $('#status').html('Plata esuata, fonduri indisponibile')
+          } else {
+            console.log('Plata efectuata cu succes', transactionId)
+            $('#status').html('Plata efectuata cu succes')
+          }
+        })
+        }
+        else if(document.getElementById("amount").value ==5){
+          const amountEth = 0.05
+          web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Plata esuata, fonduri indisponibile', err)
+            $('#status').html('Plata esuata, fonduri indisponibile')
+          } else {
+            console.log('Plata efectuata cu succes', transactionId)
+            $('#status').html('Plata efectuata cu succes')
+          }
+        })
+        }
+       
+
+
+
+       
+      })
+    }
+  </script>
+  <!--END wallet pay button-->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2023 <a href="#">Discover Milano</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script> src="https://smtpjs.com/v3/smtp.js"</script>
+
+  
+
+
+
+  </body>
+
+</html>
