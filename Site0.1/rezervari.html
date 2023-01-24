@@ -26,6 +26,8 @@ TemplateMo 580 Woox Travel
 https://templatemo.com/tm-580-woox-travel
 
 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
   </head>
 
 <body>
@@ -42,6 +44,11 @@ https://templatemo.com/tm-580-woox-travel
     </div>
   </div>
   <!-- ***** Preloader End ***** -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+</head>
+<body>
+  
 
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
@@ -165,14 +172,20 @@ https://templatemo.com/tm-580-woox-travel
               <div class="col-lg-6">
                   <fieldset>
                       <label for="chooseGuests" class="form-label">Numar persoane</label>
-                      <select id="personNumber" name="Numar persoane" class="form-select" aria-label="Default select example" id="chooseGuests" onChange="this.form.click()">
+                      <!--
+                      <select id="number-of-persons" name="number-of-persons" class="form-select" aria-label="Default select example" onchange="updatePrice()">
                           <option selected>Min. 1 Max. 5</option>
-                          <option type="checkbox" name="option1" value="1">1</option>
+                          <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="5">5</option>
                       </select>
+                    -->
+                    <div>
+                    <input onclick="fill_amount" id="amount" type="number" placeholder="eth">
+                  </div>
+                      <div id="price"></div>
                   </fieldset>
               </div>
               <div class="col-lg-6">
@@ -212,6 +225,57 @@ https://templatemo.com/tm-580-woox-travel
                   </fieldset>
               </div>
             </div>
+            <!--BEGIN wallet pay button-->
+  <script>
+    $(".option").click(function(){
+      $(".option").removeClass("active");
+      $(this).addClass("active"); 
+    });
+  </script>
+  <div>
+    <button class="pay-button">Rezerva si plateste</button>
+    <div id="status"></div>
+  </div>
+  <script type="text/javascript">
+    window.addEventListener('load', async () => {
+      if (window.ethereum) {
+        window.web3 = new Web3(ethereum);
+        try {
+          await ethereum.enable();
+          initPayButton()
+        } catch (err) {
+          $('#status').html('User denied account access', err)
+        }
+      } else if (window.web3) {
+        window.web3 = new Web3(web3.currentProvider)
+        initPayButton()
+      } else {
+        $('#status').html('No Metamask (or other Web3 Provider) installed')
+      }
+    })
+
+    const initPayButton = () => {
+      $('.pay-button').click(() => {
+        // paymentAddress is where funds will be send to
+        const paymentAddress = '0x42B348c98dB0A60401b818AA9f9fBCDa786e5754'
+        var amountEth = 0.0001
+
+        web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Payment failed', err)
+            $('#status').html('Payment failed')
+          } else {
+            console.log('Payment successful', transactionId)
+            $('#status').html('Payment successful')
+          }
+        })
+      })
+    }
+  </script>
+  <!--END wallet pay button-->
           </form>
         </div>
       </div>
@@ -244,12 +308,7 @@ https://templatemo.com/tm-580-woox-travel
 
   
 
-  <script>
-    $(".option").click(function(){
-      $(".option").removeClass("active");
-      $(this).addClass("active"); 
-    });
-  </script>
+
 
   </body>
 
