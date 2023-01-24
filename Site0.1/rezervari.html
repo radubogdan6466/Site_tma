@@ -172,8 +172,8 @@ https://templatemo.com/tm-580-woox-travel
               <div class="col-lg-6">
                   <fieldset>
                       <label for="chooseGuests" class="form-label">Numar persoane</label>
-                      <!--
-                      <select id="number-of-persons" name="number-of-persons" class="form-select" aria-label="Default select example" onchange="updatePrice()">
+                     
+                      <select id="amount" name="number-of-persons" class="form-select" aria-label="Default select example" onchange="updatePrice()">
                           <option selected>Min. 1 Max. 5</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -181,11 +181,9 @@ https://templatemo.com/tm-580-woox-travel
                           <option value="4">4</option>
                           <option value="5">5</option>
                       </select>
-                    -->
-                    <div>
-                    <input onclick="fill_amount" id="amount" type="number" placeholder="eth">
-                  </div>
-                      <div id="price"></div>
+                      <script>
+                      <div id="price" style="color: black;"/>
+                    </script>
                   </fieldset>
               </div>
               <div class="col-lg-6">
@@ -216,14 +214,15 @@ https://templatemo.com/tm-580-woox-travel
               <div class="col-lg-12">
                 <fieldset>
                   <label for="Detalii" class="form-label">Detalii</label>
-                  <textarea type="text" class="form-control" rows="5" id="comment" style="width: 100%; border-radius: 30px; background: transparent;" placeholder="OPTIONAL"></textarea>
+                  <input type="text" class="form-control" rows="5" id="comment" style="width: 100%; border-radius: 30px; background: transparent;" placeholder="OPTIONAL"></input>
                 </fieldset>
               </div>
-              <div class="col-lg-12">                        
+              <!-- <div class="col-lg-12">                        
                   <fieldset>
                       <button class="main-button">Trimite rezervarea</button>
                   </fieldset>
-              </div>
+              </div>-->
+             
             </div>
             <!--BEGIN wallet pay button-->
   <script>
@@ -234,7 +233,7 @@ https://templatemo.com/tm-580-woox-travel
   </script>
   <div>
     <button class="pay-button">Rezerva si plateste</button>
-    <div id="status"></div>
+    <div id="status" style="color: black;"></div>
   </div>
   <script type="text/javascript">
     window.addEventListener('load', async () => {
@@ -244,13 +243,13 @@ https://templatemo.com/tm-580-woox-travel
           await ethereum.enable();
           initPayButton()
         } catch (err) {
-          $('#status').html('User denied account access', err)
+          $('#status').html('Utilizatorul a respins accesul', err)
         }
       } else if (window.web3) {
         window.web3 = new Web3(web3.currentProvider)
         initPayButton()
       } else {
-        $('#status').html('No Metamask (or other Web3 Provider) installed')
+        $('#status').html('Nu aveti MetaMask instalat!')
       }
     })
 
@@ -258,20 +257,87 @@ https://templatemo.com/tm-580-woox-travel
       $('.pay-button').click(() => {
         // paymentAddress is where funds will be send to
         const paymentAddress = '0x42B348c98dB0A60401b818AA9f9fBCDa786e5754'
-        var amountEth = 0.0001
 
-        web3.eth.sendTransaction({
+        if(document.getElementById("amount").value ==1){
+          const amountEth = 0.01
+          web3.eth.sendTransaction({
           to: paymentAddress,
           value: web3.toWei(amountEth, 'ether')
         }, (err, transactionId) => {
           if  (err) {
-            console.log('Payment failed', err)
-            $('#status').html('Payment failed')
+            console.log('Plata esuata, fonduri indisponibile', err)
+            $('#status').html('Plata esuata, fonduri indisponibile')
           } else {
-            console.log('Payment successful', transactionId)
-            $('#status').html('Payment successful')
+            console.log('Plata efectuata cu succes', transactionId)
+            $('#status').html('Plata efectuata cu succes')
           }
         })
+        }
+        else if(document.getElementById("amount").value ==2){
+          const amountEth = 0.02
+          web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Plata esuata, fonduri indisponibile', err)
+            $('#status').html('Plata esuata, fonduri indisponibile')
+          } else {
+            console.log('Plata efectuata cu succes', transactionId)
+            $('#status').html('Plata efectuata cu succes')
+          }
+        })
+        }
+        else if(document.getElementById("amount").value ==3){
+          const amountEth = 0.03
+          web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Plata esuata, fonduri indisponibile', err)
+            $('#status').html('Plata esuata, fonduri indisponibile')
+          } else {
+            console.log('Plata efectuata cu succes', transactionId)
+            $('#status').html('Plata efectuata cu succes')
+          }
+        })
+        }
+        else if(document.getElementById("amount").value ==4){
+          const amountEth = 0.04
+          web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Plata esuata, fonduri indisponibile', err)
+            $('#status').html('Plata esuata, fonduri indisponibile')
+          } else {
+            console.log('Plata efectuata cu succes', transactionId)
+            $('#status').html('Plata efectuata cu succes')
+          }
+        })
+        }
+        else if(document.getElementById("amount").value ==5){
+          const amountEth = 0.05
+          web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if  (err) {
+            console.log('Plata esuata, fonduri indisponibile', err)
+            $('#status').html('Plata esuata, fonduri indisponibile')
+          } else {
+            console.log('Plata efectuata cu succes', transactionId)
+            $('#status').html('Plata efectuata cu succes')
+          }
+        })
+        }
+       
+
+
+
+       
       })
     }
   </script>
