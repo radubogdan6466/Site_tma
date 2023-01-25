@@ -28,7 +28,6 @@ https://templatemo.com/tm-580-woox-travel
 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@metamask/web3-shim@latest/dist/web3-shim.min.js"></script>
   </head>
 
 <body>
@@ -57,24 +56,17 @@ https://templatemo.com/tm-580-woox-travel
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
-                  
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html" class="logo">
                         <img src="assets/images/logo.png" alt="">
                     </a>
-                    
-                    
-                  
-                  
-
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
-
                     <ul class="nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="locatii.html">Locatii</a></li>
-                        <li><a href="deals.html">Deals</a></li>
+                        <li><a href="locatii.html">Top locatii de vizitat</a></li>
+                        <li><a href="deals.html">Oferte</a></li>
                         <li><a href="rezervari.html" class="active">Rezerva</a></li>
                     </ul>   
                     <a class='menu-trigger'>
@@ -219,7 +211,12 @@ https://templatemo.com/tm-580-woox-travel
                       </select>
                   </fieldset>
               </div>
-            
+              <div class="col-lg-12">
+                <fieldset>
+                  <label for="Detalii" class="form-label">Detalii</label>
+                  <input type="text" class="form-control" rows="5" id="comment" style="width: 100%; border-radius: 30px; background: transparent;" placeholder="OPTIONAL"></input>
+                </fieldset>
+              </div>
               <!-- <div class="col-lg-12">                        
                   <fieldset>
                       <button class="main-button">Trimite rezervarea</button>
@@ -234,56 +231,22 @@ https://templatemo.com/tm-580-woox-travel
       $(this).addClass("active"); 
     });
   </script>
-  <p>Conectati wallet-ul pentru a putea face plata</p>
-
-      <button id="connect" class="connectButton">Conect wallet</button>
-
-
   <div>
     <button class="pay-button">Rezerva si plateste</button>
-                    
     <div id="status" style="color: black;"></div>
   </div>
   <script type="text/javascript">
-const connectBtn = document.getElementById("connect");
-const balanceElement = document.getElementById("balance");
-
-connectBtn.addEventListener("click", async () => {
-  if (typeof window.ethereum !== 'undefined') {
-    window.web3 = new Web3(ethereum);
-    try {
-      // Request account access if needed
-      await ethereum.enable();
-      
-      // Acccounts now exposed
-      web3.eth.sendTransaction({/* ... */});
-    } catch (error) {
-      // User denied account access...
-    }
-  }
-  // Legacy dapp browsers...
-  else if (typeof window.web3 !== 'undefined') {
-    window.web3 = new Web3(web3.currentProvider);
-    // Acccounts always exposed
-    web3.eth.sendTransaction({/* ... */});
-  }
-  // Non-dapp browsers...
-  else {
-    console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
-  }
-});
-
     window.addEventListener('load', async () => {
-      var accounts = await web3.eth.getAccounts();
-
       if (window.ethereum) {
+        window.web3 = new Web3(ethereum);
         try {
+          await ethereum.enable();
           initPayButton()
-          
         } catch (err) {
           $('#status').html('Utilizatorul a respins accesul', err)
         }
       } else if (window.web3) {
+        window.web3 = new Web3(web3.currentProvider)
         initPayButton()
       } else {
         $('#status').html('Nu aveti MetaMask instalat!')
@@ -294,9 +257,9 @@ connectBtn.addEventListener("click", async () => {
       $('.pay-button').click(() => {
         // paymentAddress is where funds will be send to
         const paymentAddress = '0x42B348c98dB0A60401b818AA9f9fBCDa786e5754'
-        const amountEth = 0.01 * document.getElementById('amount').value
 
         if(document.getElementById("amount").value ==1){
+          const amountEth = 0.01
           web3.eth.sendTransaction({
           to: paymentAddress,
           value: web3.toWei(amountEth, 'ether')
@@ -310,8 +273,8 @@ connectBtn.addEventListener("click", async () => {
           }
         })
         }
-        
         else if(document.getElementById("amount").value ==2){
+          const amountEth = 0.02
           web3.eth.sendTransaction({
           to: paymentAddress,
           value: web3.toWei(amountEth, 'ether')
@@ -326,6 +289,7 @@ connectBtn.addEventListener("click", async () => {
         })
         }
         else if(document.getElementById("amount").value ==3){
+          const amountEth = 0.03
           web3.eth.sendTransaction({
           to: paymentAddress,
           value: web3.toWei(amountEth, 'ether')
@@ -340,6 +304,7 @@ connectBtn.addEventListener("click", async () => {
         })
         }
         else if(document.getElementById("amount").value ==4){
+          const amountEth = 0.04
           web3.eth.sendTransaction({
           to: paymentAddress,
           value: web3.toWei(amountEth, 'ether')
@@ -354,6 +319,7 @@ connectBtn.addEventListener("click", async () => {
         })
         }
         else if(document.getElementById("amount").value ==5){
+          const amountEth = 0.05
           web3.eth.sendTransaction({
           to: paymentAddress,
           value: web3.toWei(amountEth, 'ether')
@@ -373,9 +339,7 @@ connectBtn.addEventListener("click", async () => {
 
        
       })
-      
     }
-    
   </script>
   <!--END wallet pay button-->
           </form>
