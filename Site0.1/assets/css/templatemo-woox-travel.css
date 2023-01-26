@@ -418,6 +418,14 @@ Header Style
 .background-header .main-nav .nav li.has-sub ul.sub-menu li:last-child a:hover {
   padding-left: 25px !important;
 }
+.connectButton {
+  background: none;
+  border: none;
+  color: #fff;
+}
+.connectButton :hover{
+  color: red;
+}
 
 .header-area .main-nav .nav li:hover a {
   opacity: 0.8;
