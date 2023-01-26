@@ -19,16 +19,16 @@ Table of contents
 09. footer
 
 --------------------------------------------- */
-/* 
+/*
 ---------------------------------------------
 font & reset css
---------------------------------------------- 
+---------------------------------------------
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
-/* 
+/*
 ---------------------------------------------
 reset
---------------------------------------------- 
+---------------------------------------------
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -39,6 +39,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
   border: 0;
   outline: 0;
 }
+
 
 .clearfix:after {
   content: ".";
@@ -112,10 +113,10 @@ img {
   overflow: hidden;
 }
 
-/* 
+/*
 ---------------------------------------------
 Global Styles
---------------------------------------------- 
+---------------------------------------------
 */
 html,
 body {
@@ -214,10 +215,10 @@ section {
   color: #2a2a2a;
 }
 
-/* 
+/*
 ---------------------------------------------
 Pre-loader Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .js-preloader {
@@ -316,10 +317,10 @@ Pre-loader Style
 
 
 
-/* 
+/*
 ---------------------------------------------
 Header Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .background-header {
@@ -711,10 +712,10 @@ Header Style
   }
 }
 
-/* 
+/*
 ---------------------------------------------
 Banner Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 #section-1 {
@@ -936,10 +937,10 @@ Banner Style
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Visit Country Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .visit-country {
@@ -1063,10 +1064,10 @@ Visit Country Style
 
 
 
-/* 
+/*
 ---------------------------------------------
 Call To Action Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .call-to-action {
@@ -1108,10 +1109,10 @@ Call To Action Style
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Footer Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 footer {
@@ -1137,15 +1138,15 @@ footer p a:hover {
 
 
 
-/* 
+/*
 ---------------------------------------------
 About Page Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .about-main-content {
   margin-top: 70px;
-  background-image: url(../images/about-content-bg.jpg);
+  background-image: url(../images/panorama.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1156,7 +1157,7 @@ About Page Style
 .blur-bg {
 	width: 100%;
   height: 100%;
-  background: url(../images/about-content-bg.jpg) no-repeat center center fixed;
+  background: url(../images/panorama.jpg) no-repeat center center fixed;
   background-size: cover;
   filter: blur(8px) brightness(80%);
   position: absolute;
@@ -1269,7 +1270,7 @@ About Page Style
 
 .cities-town .owl-nav .owl-next::after {
   font-family: "FontAwesome";
-  content: '\f061'; 
+  content: '\f061';
   color: #cdcdcd;
   font-size: 20px;
   transition: all .3s;
@@ -1281,7 +1282,7 @@ About Page Style
 
 .cities-town .owl-nav .owl-prev::after {
   font-family: "FontAwesome";
-  content: '\f060'; 
+  content: '\f060';
   color: #cdcdcd;
   margin-right: 15px;
   font-size: 20px;
@@ -1384,7 +1385,7 @@ About Page Style
 
 .weekly-offers .owl-nav .owl-next::after {
   font-family: "FontAwesome";
-  content: '\f061'; 
+  content: '\f061';
   color: #ff0000;
   font-size: 20px;
   width: 46px;
@@ -1404,7 +1405,7 @@ About Page Style
 
 .weekly-offers .owl-nav .owl-prev::after {
   font-family: "FontAwesome";
-  content: '\f060'; 
+  content: '\f060';
   color: #ff0000;
   font-size: 20px;
   width: 46px;
@@ -1842,10 +1843,10 @@ body .options .option .label .info .sub {
 
 
 
-/* 
+/*
 ---------------------------------------------
 Deals Page Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .page-heading {
@@ -2024,14 +2025,14 @@ Deals Page Style
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Reservation Page Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 .second-page-heading {
-  background-image: url(../images/heading-bg-02.jpg);
+  background-image: url(../images/lp.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2090,7 +2091,7 @@ Reservation Page Style
 
 .more-info .info-item {
   background-color: #fff;
-  border-radius: 23px;
+  border-radius: 2px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
   text-align: center;
   padding: 30px;
@@ -2191,10 +2192,10 @@ Reservation Page Style
 
 
 
-/* 
+/*
 ---------------------------------------------
 Responsive Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 body {
@@ -2242,7 +2243,7 @@ body {
   #section-1 .more-info h4 {
     font-size: 14px !important;
   }
-  #section-1 .content-slider nav .controls label { 
+  #section-1 .content-slider nav .controls label {
     width: 7% !important;
   }
   .visit-country .item .right-content ul li {
@@ -2276,7 +2277,7 @@ body {
   .visit-country .item .right-content {
     position: relative;
   }
-  
+
   .visit-country .side-bar-map {
     margin-left: 0px;
     margin-top: 60px;
