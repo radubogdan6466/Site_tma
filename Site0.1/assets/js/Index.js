@@ -46,75 +46,23 @@ try {
             const paymentAddress = '0x42B348c98dB0A60401b818AA9f9fBCDa786e5754'
             const amountEth = 0.01 * document.getElementById('amount').value
 
-            if(document.getElementById("amount").value ==1){
-              web3.eth.sendTransaction({
-              to: paymentAddress,
-              value: web3.toWei(amountEth, 'ether')
-            }, (err, transactionId) => {
-              if  (err) {
-                console.log('Plata esuata, fonduri indisponibile', err)
-                $('#status').html('Plata esuata, fonduri indisponibile')
-              } else {
-                console.log('Plata efectuata cu succes', transactionId)
-                $('#status').html('Plata efectuata cu succes')
+            for(let i=document.getElementById('amount').value ; i == document.getElementById('amount').value;i++ ){
+              if(document.getElementById("amount").value ==i){
+                web3.eth.sendTransaction({
+                to: paymentAddress,
+                value: web3.toWei(amountEth, 'ether')
+              }, (err, transactionId) => {
+                if  (err) {
+                  console.log('Plata esuata, fonduri indisponibile', err)
+                  $('#status').html('Plata esuata, fonduri indisponibile')
+                } else {
+                  console.log('Plata efectuata cu succes', transactionId)
+                  $('#status').html('Plata efectuata cu succes')
+                }
+              })
               }
-            })
+
             }
-            else if(document.getElementById("amount").value ==2){
-              web3.eth.sendTransaction({
-              to: paymentAddress,
-              value: web3.toWei(amountEth, 'ether')
-            }, (err, transactionId) => {
-              if  (err) {
-                console.log('Plata esuata, fonduri indisponibile', err)
-                $('#status').html('Plata esuata, fonduri indisponibile')
-              } else {
-                console.log('Plata efectuata cu succes', transactionId)
-                $('#status').html('Plata efectuata cu succes')
-              }
-            })
-            }
-              else if(document.getElementById("amount").value ==3){
-                web3.eth.sendTransaction({
-                to: paymentAddress,
-                value: web3.toWei(amountEth, 'ether')
-              }, (err, transactionId) => {
-                if  (err) {
-                  console.log('Plata esuata, fonduri indisponibile', err)
-                  $('#status').html('Plata esuata, fonduri indisponibile')
-                } else {
-                  console.log('Plata efectuata cu succes', transactionId)
-                  $('#status').html('Plata efectuata cu succes')
-                }
-              })
-              }
-              else if(document.getElementById("amount").value ==4){
-                web3.eth.sendTransaction({
-                to: paymentAddress,
-                value: web3.toWei(amountEth, 'ether')
-              }, (err, transactionId) => {
-                if  (err) {
-                  console.log('Plata esuata, fonduri indisponibile', err)
-                  $('#status').html('Plata esuata, fonduri indisponibile')
-                } else {
-                  console.log('Plata efectuata cu succes', transactionId)
-                  $('#status').html('Plata efectuata cu succes')
-                }
-              })
-              }
-              else if(document.getElementById("amount").value ==5){
-                web3.eth.sendTransaction({
-                to: paymentAddress,
-                value: web3.toWei(amountEth, 'ether')
-              }, (err, transactionId) => {
-                if  (err) {
-                  console.log('Plata esuata, fonduri indisponibile', err)
-                  $('#status').html('Plata esuata, fonduri indisponibile')
-                } else {
-                  console.log('Plata efectuata cu succes', transactionId)
-                  $('#status').html('Plata efectuata cu succes')
-                }
-              })
-              }
+            
 })  
 }
