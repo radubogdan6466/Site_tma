@@ -30,6 +30,11 @@ https://templatemo.com/tm-580-woox-travel
   <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@metamask/web3-shim@latest/dist/web3-shim.min.js"></script>
   
+
+
+
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
 </head>
 
 <body>
@@ -106,41 +111,99 @@ https://templatemo.com/tm-580-woox-travel
       </div>
     </div>
   </div>
-  <div class="more-info reservation-info">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-sm-6">
-          <div class="info-item">
-            <i class="fa fa-phone"></i>
-            <h4>Suna-ne</h4>
-            <a href="#">+40 735 468 383</a>
+
+
+<!--flip card begin-->
+
+<div class="more-info reservation-info">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-sm-6">
+  <div class="card">
+		<div class="card__inner">
+			<div class="card__face card__face--front">
+        <i class="fab fa-whatsapp"></i>
+
+			</div>
+			<div class="card__face card__face--back">
+				<div class="card__content">
+					<div class="card__header">
+						<h4>Whatsapp</h4>
+					</div>
+					<div class="card__body">
+            <a href="#"><i class="fab fa-whatsapp"></i>+40 735 468 383</a>	
           </div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+  <div class="col-lg-3 col-sm-6">
+    <div class="card">
+      <div class="card__inner1">
+        <div class="card__face card__face--front">
+          <i class="fa fa-map-marker"></i>
+  
         </div>
-        <div class="col-lg-3 col-sm-6">
-          <div class="info-item">
-            <i class="fa fa-envelope"></i>
-            <h4>Trimite un email</h4>
-            <a href="#">rcristianb@gmail.com</a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <div class="info-item">
-            <i class="fa fa-map-marker"></i>
-            <h4>Viziteaza-ne</h4>
-            <a href="https://www.google.com/maps/dir/45.8077833,21.3135575/uvt/@45.780625,21.2026578,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47455d84610655bf:0xfd169ff24d29f192!2m2!1d21.2316152!2d45.7471195">
-              Bulevardul Vasile Pârvan 4</a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <div class="info-item">
-            <i class="fa fa-envelope"></i>
-            <h4>Ai nevoie de asigurare?</h4>
-            <a href="./assets/src/asigurare.pdf">Acoperiri</a>
+        <div class="card__face card__face--back">
+          <div class="card__content">
+            <div class="card__header">
+              <h4>Viziteaza-ne</h4>            
+            </div>
+            <div class="card__body">
+              <a href="https://www.google.com/maps/dir/45.8077833,21.3135575/uvt/@45.780625,21.2026578,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47455d84610655bf:0xfd169ff24d29f192!2m2!1d21.2316152!2d45.7471195">
+                Bulevardul Vasile Pârvan 4</a>           
+              </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+      <div class="card">
+        <div class="card__inner2">
+          <div class="card__face card__face--front">
+            <i class="fa fa-envelope"></i>
+    
+          </div>
+          <div class="card__face card__face--back">
+            <div class="card__content">
+              <div class="card__header">
+                <h4>Trimite un email</h4>
+               </div>
+              <div class="card__body">
+                <a href="#">rcristianb@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="card">
+          <div class="card__inner3">
+            <div class="card__face card__face--front">
+              <i class="fa-regular fa-file"></i>      
+            </div>
+            <div class="card__face card__face--back">
+              <div class="card__content">
+                <div class="card__header">
+                  <h4>Ai nevoie de asigurare?</h4>
+                 </div>
+                <div class="card__body">
+                  <a href="./assets/src/asigurare.pdf">Acoperiri</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+  
+</div>
+</div>
+</div>
+<!--flip card end-->
+
   <div class="reservation-form">
     <div class="container">
       <div class="row">
@@ -212,9 +275,9 @@ https://templatemo.com/tm-580-woox-travel
                       <label for="chooseDestination" class="form-label">Alegeti destinatia</label>
                       <select name="Destinatie" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
                           <option selected>ex. Italia, Milano</option>
-                          <option value="Italy, Roma">Cosmo Hotel Palace</option>
-                          <option value="Italy, Roma">Hotel Da Vinci</option>
-                          <option value="Italy, Roma">Idea Hotel Milano San Siro</option>    
+                          <option value="Italia, Milano - Hotel: Cosmo Hotel Palace">Cosmo Hotel Palace</option>
+                          <option value="Italia, Milano - Hotel: Hotel Da Vinci">Hotel Da Vinci</option>
+                          <option value="Italia, Milano - Hotel: Idea Hotel Milano San Siro">Idea Hotel Milano San Siro</option>    
                       </select>
                   </fieldset>
               </div>
@@ -289,6 +352,8 @@ https://templatemo.com/tm-580-woox-travel
   <!--script comenzi js- connect btn, pay btn-->
 
   <script src="./assets/js/Index.js"></script>
+  <script src="./assets/js/main.js"></script>
+
   </body>
 
 </html>
