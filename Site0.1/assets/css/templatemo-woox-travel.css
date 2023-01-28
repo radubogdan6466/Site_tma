@@ -827,15 +827,15 @@ Banner Style
   transition: 0.3s;
 }
 #section-1 .content-slider .slider #top-banner-1 {
-  background: url('../images/banner-01.jpg') no-repeat center center;
+  background: url('../images/home1banner.jpg') no-repeat center center;
   background-size: cover;
 }
-#section-1 .content-slider .slider #top-banner-2 {
-  background: url('../images/banner-02.jpg') no-repeat center center;
-  background-size: cover;
-}
+    #section-1 .content-slider .slider #top-banner-2 {
+        background: url('../images/home2banner.jpg') no-repeat center center;
+        background-size: cover;
+    }
 #section-1 .content-slider .slider #top-banner-3 {
-  background: url('../images/banner-03.jpg') no-repeat center center;
+  background: url('../images/home3banner.jpg') no-repeat center center;
   background-size: cover;
 }
 #section-1 .content-slider .slider #top-banner-4 {
